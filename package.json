@@ -1,0 +1,38 @@
+{
+  "name": "ma",
+  "version": "1.0.0",
+  "description": "Brain Games Project",
+  "main": "index.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "test",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/green-zelen/project-lvl1-s462.git"
+  },
+  "keywords": [
+    "hexlet",
+    "brain",
+    "games"
+  ],
+  "author": "Mariia Perlovskaia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/green-zelen/project-lvl1-s462/issues"
+  },
+  "homepage": "https://github.com/green-zelen/project-lvl1-s462#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4"
+  }
+}
