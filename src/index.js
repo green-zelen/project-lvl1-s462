@@ -1,35 +1,38 @@
 import readlineSync from 'readline-sync';
 
 // Переменная, в которой хранится имя
-let userName = '';
-
 export const askUserName = () => {
-  userName = readlineSync.question('May I have your name? ');
+  const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   return userName;
 };
 
-// Счетчик
-let operationsCounter = 1;
-export let randomNum = Math.floor((Math.random() * 100));
+const evenOdd = (counter, name) => {
+  let answersCounter = counter;
+  const randomNum = Math.floor((Math.random() * 100));
+  const userAnswer = readlineSync.question(`Question: ${randomNum} Your answer:`);
 
-export const evenOdd = (num, answer) => {
-  if ((num % 2 === 0 && answer === 'yes') || (num % 2 !== 0 && answer === 'no')) {
+  if ((randomNum % 2 === 0 && userAnswer === 'yes') || (randomNum % 2 !== 0 && userAnswer === 'no')) {
     console.log('Correct!');
-    if (operationsCounter < 3) {
-      randomNum = Math.floor((Math.random() * 100));
-      operationsCounter += 1;
-      return evenOdd(randomNum, readlineSync.question(`Question: ${randomNum} Your answer: `));
+    if (counter < 3) {
+      answersCounter += 1;
+      return evenOdd(answersCounter, name);
     }
-    console.log(`Congratulations, ${userName}!`);
+    console.log(`Congratulations, ${name}!`);
     return true;
   }
-  if (answer === 'yes') {
-    console.log(`'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${userName}!`);
+  if (userAnswer === 'yes') {
+    console.log(`${userAnswer} is wrong answer ;(. Correct answer was 'no'. Let's try again, ${name}!`);
     return false;
   }
-  console.log(`'no' is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${userName}!`);
+  console.log(`${userAnswer} is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${name}!`);
   return false;
 };
 
-export default evenOdd;
+export const startBrainEven = () => {
+  // Счетчик
+  const operationsCounter = 1;
+  const userName = askUserName();
+  evenOdd(operationsCounter, userName);
+};
+export default startBrainEven;
