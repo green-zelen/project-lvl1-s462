@@ -1,38 +1,29 @@
 import readlineSync from 'readline-sync';
 
-// Переменная, в которой хранится имя
-export const askUserName = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  return userName;
-};
+console.log('Welcome to the Brain Games!');
+console.log('Answer "yes" if number even otherwise answer "no".');
 
-const evenOdd = (counter, name) => {
-  let answersCounter = counter;
-  const randomNum = Math.floor((Math.random() * 100));
+export const userName = readlineSync.question('May I have your name? ');
+console.log(`Hello, ${userName}!`);
+
+const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
+
+export const evenOdd = (counter, answers) => {
+  const randomNum = getRandomInt(1, 999);
   const userAnswer = readlineSync.question(`Question: ${randomNum} Your answer:`);
+  const getCorrectAnswer = () => (randomNum % 2 === 0 ? 'yes' : 'no');
+  const correctAnswer = getCorrectAnswer();
 
-  if ((randomNum % 2 === 0 && userAnswer === 'yes') || (randomNum % 2 !== 0 && userAnswer === 'no')) {
+  if (correctAnswer === userAnswer) {
     console.log('Correct!');
-    if (counter < 3) {
-      answersCounter += 1;
-      return evenOdd(answersCounter, name);
+    if (counter < answers) {
+      return evenOdd(counter + 1, answers);
     }
-    console.log(`Congratulations, ${name}!`);
+    console.log(`Congratulations, ${userName}!`);
     return true;
   }
-  if (userAnswer === 'yes') {
-    console.log(`${userAnswer} is wrong answer ;(. Correct answer was 'no'. Let's try again, ${name}!`);
-    return false;
-  }
-  console.log(`${userAnswer} is wrong answer ;(. Correct answer was 'yes'. Let's try again, ${name}!`);
+  console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}. Let's try again, ${userName}!`);
   return false;
 };
 
-export const startBrainEven = () => {
-  // Счетчик
-  const operationsCounter = 1;
-  const userName = askUserName();
-  evenOdd(operationsCounter, userName);
-};
-export default startBrainEven;
+export default evenOdd;

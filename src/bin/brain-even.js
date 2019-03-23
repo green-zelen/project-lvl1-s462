@@ -1,6 +1,6 @@
-import { startBrainEven } from '../index';
+import { evenOdd } from '../index';
 
-console.log('Welcome to the Brain Games!');
-console.log('Answer "yes" if number even otherwise answer "no".');
+const answersAmount = 3;
+const gameCounter = 1;
 
-startBrainEven();
+evenOdd(gameCounter, answersAmount);
