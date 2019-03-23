@@ -1,5 +1,4 @@
-import { startEvenOddGame } from '../index';
+import { startBrainGames } from '../index';
+import { question } from '../even-odd';
 
-const roundNum = 3;
-
-startEvenOddGame(roundNum);
+startBrainGames(question, 'Answer "yes" if number even otherwise answer "no".');
