@@ -1,4 +1,4 @@
-import { startBrainGames } from '../index';
-import { question } from '../even-odd';
+import { startBrainGame } from '../index';
+import { question, rules } from '../games/brain-even';
 
-startBrainGames(question, 'Answer "yes" if number even otherwise answer "no".');
+startBrainGame(question, rules);

@@ -16,5 +16,8 @@ start_even:
 start_calc:
 	npx babel-node src/bin/brain-calculator.js
 
+start_gcd:
+	npx babel-node src/bin/brain-gcd.js
+
 publish:
 	npm publish
