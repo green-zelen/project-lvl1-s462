@@ -1,6 +1,5 @@
-import { evenOdd } from '../index';
+import { startEvenOddGame } from '../index';
 
-const answersAmount = 3;
-const gameCounter = 1;
+const roundNum = 3;
 
-evenOdd(gameCounter, answersAmount);
+startEvenOddGame(roundNum);
