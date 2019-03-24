@@ -5,14 +5,10 @@ const description = 'What is the result of the expression?';
 
 const minRnd = 1;
 const maxRnd = 100;
+const operators = '-+*';
 
-const getRandomAction = () => {
-  const actions = '-+*';
-  return actions[getRandInt(1, actions.length)];
-};
-
-const getCorrectAnswer = (n1, n2, act) => {
-  switch (act) {
+const getCorrectAnswer = (n1, n2, operator) => {
+  switch (operator) {
     case '+':
       return n1 + n2;
     case '-':
@@ -20,7 +16,6 @@ const getCorrectAnswer = (n1, n2, act) => {
     case '*':
       return n1 * n2;
     default:
-      console.log('Wrong action');
       return false;
   }
 };
@@ -28,7 +23,7 @@ const getCorrectAnswer = (n1, n2, act) => {
 const question = () => {
   const n1 = getRandInt(minRnd, maxRnd);
   const n2 = getRandInt(minRnd, maxRnd);
-  const action = getRandomAction();
+  const action = operators[getRandInt(1, operators.length)];
 
   const questionText = `Question: ${n1} ${action} ${n2}`;
   const correctAnswerText = String(getCorrectAnswer(n1, n2, action));
