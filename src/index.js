@@ -1,32 +1,33 @@
 import readlineSync from 'readline-sync';
 
-export const getRandInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
-
 const maxRounds = 3;
 
-const gameRound = (question, roundCounter) => {
+const gameRound = (getQuestion, roundCounter) => {
   if (roundCounter > maxRounds) {
     return true;
   }
-
-  if (!question()) {
+  const q = getQuestion();
+  console.log(q.question);
+  const userAnswer = readlineSync.question('Your answer: ');
+  if (userAnswer !== q.correctAnswer) {
+    console.log(`"${userAnswer}" is wrong answer ;(.`);
+    console.log(`Correct answer was "${q.correctAnswer}".`);
     return false;
   }
-  return gameRound(question, roundCounter + 1);
+  console.log('Correct!');
+  return gameRound(getQuestion, roundCounter + 1);
 };
 
-export const startBrainGame = (question, rules) => {
+export const startBrainGame = (getQuestion, description) => {
   console.log('Welcome to the Brain Games!');
-  console.log(rules);
-
+  console.log(description);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  if (!gameRound(question, 1)) {
+  if (!gameRound(getQuestion, 1)) {
     console.log(`Let's try again, ${userName}!`);
   } else {
     console.log(`Congratulations, ${userName}!`);
   }
 };
-
 export default startBrainGame;

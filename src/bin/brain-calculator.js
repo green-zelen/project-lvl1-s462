@@ -1,4 +1,3 @@
-import { startBrainGame } from '../index';
-import { question, rules } from '../games/brain-calc';
+import { startCalcGame } from '../games/brain-calc';
 
-startBrainGame(question, rules);
+startCalcGame();

@@ -1,51 +1,48 @@
-import readlineSync from 'readline-sync';
-import { getRandInt } from '../index';
+import { startBrainGame } from '../index';
+import { getRandInt } from '../utils';
 
-export const rules = 'What is the result of the expression?';
+export const desc = 'What is the result of the expression?';
 
 const minRnd = 1;
 const maxRnd = 100;
 
 const getRandomAction = () => {
-  const actionsStr = '-+*';
-  return actionsStr[getRandInt(1, actionsStr.length)];
+  const actions = '-+*';
+  return actions[getRandInt(1, actions.length)];
 };
 
-const isCorrect = (n1, n2, act, userAnswer) => {
-  let correctAnswer;
+const getCorrectAnswer = (n1, n2, act) => {
   switch (act) {
     case '+':
-      correctAnswer = n1 + n2;
-      break;
+      return n1 + n2;
     case '-':
-      correctAnswer = n1 - n2;
-      break;
+      return n1 - n2;
     case '*':
-      correctAnswer = n1 * n2;
-      break;
+      return n1 * n2;
     default:
       console.log('Wrong action');
       return false;
   }
-  const result = correctAnswer === userAnswer;
-  if (result) {
-    console.log('Correct!');
-  } else {
-    console.log(`"${userAnswer}" is wrong answer ;(.`);
-    console.log(`Correct answer was "${correctAnswer}".`);
-  }
-  return result;
 };
 
-export const question = () => {
+const question = () => {
   const n1 = getRandInt(minRnd, maxRnd);
   const n2 = getRandInt(minRnd, maxRnd);
   const action = getRandomAction();
 
-  console.log(`Question: ${n1} ${action} ${n2}`);
-  const userAnswer = Number(readlineSync.question('Your answer: '));
+  const questionText = `Question: ${n1} ${action} ${n2}`;
+  const correctAnswerText = String(getCorrectAnswer(n1, n2, action));
 
-  return isCorrect(n1, n2, action, userAnswer);
+  const questionAndAnswer = {
+    question: questionText,
+    correctAnswer: correctAnswerText,
+  };
+
+  return questionAndAnswer;
 };
 
-export default question;
+export const startCalcGame = () => {
+  startBrainGame(question, desc);
+};
+
+export default startCalcGame;
