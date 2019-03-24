@@ -15,7 +15,7 @@ const getProgression = (startNum, step, size) => {
   return progression;
 };
 
-const question = () => {
+const getQuestionAndAnswer = () => {
   const start = getRandInt(minRnd, maxRnd);
   const step = getRandInt(minRnd, maxRnd);
   const problemPosition = getRandInt(1, length) - 1;
@@ -24,17 +24,17 @@ const question = () => {
   const correctAnswer = String(progression[problemPosition]);
   progression[problemPosition] = '..';
 
-  const questionText = `Question: ${progression}`;
+  const question = `${progression}`;
 
   const questionAndAnswer = {
-    question: questionText,
+    question,
     correctAnswer,
   };
   return questionAndAnswer;
 };
 
 const startProgressionGame = () => {
-  playBrainGame(question, description);
+  playBrainGame(getQuestionAndAnswer, description);
 };
 
 export default startProgressionGame;

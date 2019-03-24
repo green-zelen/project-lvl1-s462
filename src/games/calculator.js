@@ -20,24 +20,24 @@ const getCorrectAnswer = (n1, n2, operator) => {
   }
 };
 
-const question = () => {
-  const n1 = getRandInt(minRnd, maxRnd);
-  const n2 = getRandInt(minRnd, maxRnd);
+const getQuestionAndAnswer = () => {
+  const numberForQuestion1 = getRandInt(minRnd, maxRnd);
+  const numberForQuestion2 = getRandInt(minRnd, maxRnd);
   const action = operators[getRandInt(1, operators.length)];
 
-  const questionText = `Question: ${n1} ${action} ${n2}`;
-  const correctAnswerText = String(getCorrectAnswer(n1, n2, action));
+  const question = `${numberForQuestion1} ${action} ${numberForQuestion2}`;
+  const correctAnswer = String(getCorrectAnswer(numberForQuestion1, numberForQuestion2, action));
 
   const questionAndAnswer = {
-    question: questionText,
-    correctAnswer: correctAnswerText,
+    question,
+    correctAnswer,
   };
 
   return questionAndAnswer;
 };
 
 const startCalcGame = () => {
-  playBrainGame(question, description);
+  playBrainGame(getQuestionAndAnswer, description);
 };
 
 export default startCalcGame;

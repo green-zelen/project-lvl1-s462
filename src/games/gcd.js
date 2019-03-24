@@ -8,22 +8,22 @@ const maxRnd = 100;
 
 const getGCD = (a, b) => (!b ? a : getGCD(b, a % b));
 
-const question = () => {
-  const n1 = getRandInt(minRnd, maxRnd);
-  const n2 = getRandInt(minRnd, maxRnd);
+const getQuestionAndAnswer = () => {
+  const numberForQuestion1 = getRandInt(minRnd, maxRnd);
+  const numberForQuestion2 = getRandInt(minRnd, maxRnd);
 
-  const questionText = `Question: ${n1} ${n2}`;
-  const correctAnswerText = String(getGCD(n1, n2));
+  const question = `${numberForQuestion1} ${numberForQuestion2}`;
+  const correctAnswer = String(getGCD(numberForQuestion1, numberForQuestion2));
 
   const questionAndAnswer = {
-    question: questionText,
-    correctAnswer: correctAnswerText,
+    question,
+    correctAnswer,
   };
   return questionAndAnswer;
 };
 
 const startGCDGame = () => {
-  playBrainGame(question, description);
+  playBrainGame(getQuestionAndAnswer, description);
 };
 
 export default startGCDGame;
