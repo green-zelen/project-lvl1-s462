@@ -7,33 +7,50 @@
 ```sh
 $ make install 
 ```
+### Aschiinema
+https://asciinema.org/a/pDse8gxCxEFscqhEupPRQIHSQ
+
 
 ## Start Even Game
 
 ```sh
 $ make start_even 
 ```
+### Aschiinema
+https://asciinema.org/a/Ovfqr6KFuXDsz2JXFPxD4xVJ9
+
 
 ## Start Calculator Game
 
 ```sh
 $ make start_calc 
 ```
+### Aschiinema
+https://asciinema.org/a/1tdBZs6pLzOkrbls29dQgu3YM
+
 
 ## Start GCD Game
 
 ```sh
 $ make start_gcd 
 ```
+### Aschiinema
+https://asciinema.org/a/QELJtRSxeOxeM7jKyEyi5a8ln
+
 
 ## Start Progression Game
 
 ```sh
 $ make start_prog 
 ```
+### Aschiinema
+https://asciinema.org/a/x4mU7RPN1ynnSN1Z9iWwmRVrj
+
 
 ## Start Prime Game
 
 ```sh
 $ make start_prime 
 ```
+### Aschiinema
+https://asciinema.org/a/Vjr1txzGEYZN3xwnkypKADysN
