@@ -1,3 +1,4 @@
-import startEvenGame from '../games/brain-even';
+#!/usr/bin/env node
+import startEvenGame from '../games/even';
 
 startEvenGame();

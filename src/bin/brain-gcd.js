@@ -1,3 +1,4 @@
-import startGCDGame from '../games/brain-gcd';
+#!/usr/bin/env node
+import startGCDGame from '../games/gcd';
 
 startGCDGame();

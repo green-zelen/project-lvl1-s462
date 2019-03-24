@@ -7,29 +7,27 @@ const minRnd = 1;
 const maxRnd = 100;
 
 const isPrime = (num) => {
-  for (let i = 2; i < num; i += 1) {
+  for (let i = 2; i < Math.floor(num / 2); i += 1) {
     if (num % i === 0) return false;
   }
   return num > 1;
 };
 
-const getCorrectAnswer = num => (isPrime(num) ? 'yes' : 'no');
-
-const question = () => {
+const getQuestionAndAnswer = () => {
   const randomNum = getRandInt(minRnd, maxRnd);
-  const questionText = `Question: ${randomNum}`;
-  const correctAnswerText = getCorrectAnswer(randomNum);
+  const question = `Question: ${randomNum}`;
+  const correctAnswer = (isPrime(randomNum) ? 'yes' : 'no');
 
-  const questionAndAnswer = {
-    question: questionText,
-    correctAnswer: correctAnswerText,
+  const gameData = {
+    question,
+    correctAnswer,
   };
 
-  return questionAndAnswer;
+  return gameData;
 };
 
 const startPrimeGame = () => {
-  playBrainGame(question, desc);
+  playBrainGame(getQuestionAndAnswer, desc);
 };
 
 export default startPrimeGame;

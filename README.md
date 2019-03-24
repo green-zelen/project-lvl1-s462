@@ -25,3 +25,15 @@ $ make start_calc
 ```sh
 $ make start_gcd 
 ```
+
+## Start Progression Game
+
+```sh
+$ make start_prog 
+```
+
+## Start Prime Game
+
+```sh
+$ make start_prime 
+```

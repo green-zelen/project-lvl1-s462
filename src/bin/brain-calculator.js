@@ -1,3 +1,4 @@
-import startCalcGame from '../games/brain-calc';
+#!/usr/bin/env node
+import startCalcGame from '../games/calculator';
 
 startCalcGame();
