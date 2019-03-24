@@ -1,7 +1,7 @@
 import { getRandInt } from '../utils';
 import { startBrainGame } from '../index';
 
-export const desc = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
 const minRnd = 1;
 const maxRnd = 100;
@@ -23,7 +23,7 @@ const question = () => {
 };
 
 export const startGCDGame = () => {
-  startBrainGame(question, desc);
+  startBrainGame(question, description);
 };
 
 export default startGCDGame;

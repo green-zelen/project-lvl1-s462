@@ -1,7 +1,7 @@
 import { startBrainGame } from '../index';
 import { getRandInt } from '../utils';
 
-export const desc = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const minRnd = 1;
 const maxRnd = 100;
@@ -42,7 +42,7 @@ const question = () => {
 };
 
 export const startCalcGame = () => {
-  startBrainGame(question, desc);
+  startBrainGame(question, description);
 };
 
 export default startCalcGame;

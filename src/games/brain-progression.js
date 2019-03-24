@@ -1,7 +1,7 @@
 import { getRandInt } from '../utils';
 import { startBrainGame } from '../index';
 
-export const desc = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const minRnd = 1;
 const maxRnd = 100;
@@ -39,7 +39,7 @@ const question = () => {
 };
 
 export const startProgressionGame = () => {
-  startBrainGame(question, desc);
+  startBrainGame(question, description);
 };
 
 export default startProgressionGame;
