@@ -1,5 +1,5 @@
-import { getRandInt } from '../utils';
-import { startBrainGame } from '../index';
+import getRandInt from '../utils';
+import playBrainGame from '../index';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
@@ -22,8 +22,8 @@ const question = () => {
   return questionAndAnswer;
 };
 
-export const startEvenGame = () => {
-  startBrainGame(question, description);
+const startEvenGame = () => {
+  playBrainGame(question, description);
 };
 
 export default startEvenGame;

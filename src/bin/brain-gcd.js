@@ -1,3 +1,3 @@
-import { startGCDGame } from '../games/brain-gcd';
+import startGCDGame from '../games/brain-gcd';
 
 startGCDGame();

@@ -1,5 +1,5 @@
-import { getRandInt } from '../utils';
-import { startBrainGame } from '../index';
+import getRandInt from '../utils';
+import playBrainGame from '../index';
 
 const desc = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -28,8 +28,8 @@ const question = () => {
   return questionAndAnswer;
 };
 
-export const startPrimeGame = () => {
-  startBrainGame(question, desc);
+const startPrimeGame = () => {
+  playBrainGame(question, desc);
 };
 
 export default startPrimeGame;

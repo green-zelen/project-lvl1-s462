@@ -1,3 +1,3 @@
-import { startEvenGame } from '../games/brain-even';
+import startEvenGame from '../games/brain-even';
 
 startEvenGame();

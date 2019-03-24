@@ -1,5 +1,5 @@
-import { getRandInt } from '../utils';
-import { startBrainGame } from '../index';
+import getRandInt from '../utils';
+import playBrainGame from '../index';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
@@ -22,8 +22,8 @@ const question = () => {
   return questionAndAnswer;
 };
 
-export const startGCDGame = () => {
-  startBrainGame(question, description);
+const startGCDGame = () => {
+  playBrainGame(question, description);
 };
 
 export default startGCDGame;

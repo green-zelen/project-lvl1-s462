@@ -18,7 +18,7 @@ const gameRound = (getQuestion, roundCounter) => {
   return gameRound(getQuestion, roundCounter + 1);
 };
 
-export const startBrainGame = (getQuestion, description) => {
+const playBrainGame = (getQuestion, description) => {
   console.log('Welcome to the Brain Games!');
   console.log(description);
   const userName = readlineSync.question('May I have your name? ');
@@ -30,4 +30,4 @@ export const startBrainGame = (getQuestion, description) => {
     console.log(`Congratulations, ${userName}!`);
   }
 };
-export default startBrainGame;
+export default playBrainGame;

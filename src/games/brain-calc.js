@@ -1,5 +1,5 @@
-import { startBrainGame } from '../index';
-import { getRandInt } from '../utils';
+import getRandInt from '../utils';
+import playBrainGame from '../index';
 
 const description = 'What is the result of the expression?';
 
@@ -36,8 +36,8 @@ const question = () => {
   return questionAndAnswer;
 };
 
-export const startCalcGame = () => {
-  startBrainGame(question, description);
+const startCalcGame = () => {
+  playBrainGame(question, description);
 };
 
 export default startCalcGame;

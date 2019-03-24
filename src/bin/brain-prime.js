@@ -1,3 +1,3 @@
-import { startPrimeGame } from '../games/brain-prime';
+import startPrimeGame from '../games/brain-prime';
 
 startPrimeGame();
