@@ -8,9 +8,8 @@ const maxRnd = 100;
 const isEven = num => num % 2 === 0;
 
 const getQuestionAndAnswer = () => {
-  const numberForQuestion = getRandInt(minRnd, maxRnd);
-  const question = `${numberForQuestion}`;
-  const correctAnswer = (isEven(numberForQuestion) ? 'yes' : 'no');
+  const question = `${getRandInt(minRnd, maxRnd)}`;
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
 
   const questionAndAnswer = {
     question,

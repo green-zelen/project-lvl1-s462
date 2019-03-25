@@ -14,9 +14,8 @@ const isPrime = (num) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const randomNum = getRandInt(minRnd, maxRnd);
-  const question = `${randomNum}`;
-  const correctAnswer = (isPrime(randomNum) ? 'yes' : 'no');
+  const question = `${getRandInt(minRnd, maxRnd)}`;
+  const correctAnswer = (isPrime(question) ? 'yes' : 'no');
 
   const gameData = {
     question,

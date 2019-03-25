@@ -6,20 +6,23 @@ const playBrainGame = (getQuestionAndAnswer, description) => {
   console.log(description);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  for (let i = 0; i < maxRounds; i += 1) {
-    const question = getQuestionAndAnswer();
-    console.log(`Question: ${question.question}`);
+  for (let i = 1; i <= maxRounds; i += 1) {
+    const questionAndAnswer = getQuestionAndAnswer();
+    console.log(`Question: ${questionAndAnswer.question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === question.correctAnswer) {
+    if (userAnswer === questionAndAnswer.correctAnswer) {
       console.log('Correct!');
     } else {
       console.log(`"${userAnswer}" is wrong answer ;(.`);
-      console.log(`Correct answer was "${question.correctAnswer}".`);
+      console.log(`Correct answer was "${questionAndAnswer.correctAnswer}".`);
       console.log(`Let's try again, ${userName}!`);
       break;
     }
-    console.log(`Congratulations, ${userName}!`);
+    if (i === maxRounds) {
+      console.log(`Congratulations, ${userName}!`);
+    }
   }
+  return true;
 };
 
 export default playBrainGame;
