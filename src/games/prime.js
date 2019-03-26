@@ -3,8 +3,8 @@ import playBrainGame from '../index';
 
 const desc = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const minRnd = 1;
-const maxRnd = 100;
+const minRnd = 4;
+const maxRnd = 4;
 
 const isPrime = (num) => {
   for (let i = 2; i < Math.floor(num / 2); i += 1) {
@@ -14,8 +14,8 @@ const isPrime = (num) => {
 };
 
 const getQuestionAndAnswer = () => {
-  const question = `${getRandInt(minRnd, maxRnd)}`;
-  const correctAnswer = (isPrime(question) ? 'yes' : 'no');
+  const question = getRandInt(minRnd, maxRnd);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
   const gameData = {
     question,

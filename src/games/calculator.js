@@ -23,7 +23,7 @@ const getCorrectAnswer = (n1, n2, operator) => {
 const getQuestionAndAnswer = () => {
   const numberForQuestion1 = getRandInt(minRnd, maxRnd);
   const numberForQuestion2 = getRandInt(minRnd, maxRnd);
-  const action = operators[getRandInt(1, operators.length)];
+  const action = operators[getRandInt(0, operators.length)];
 
   const question = `${numberForQuestion1} ${action} ${numberForQuestion2}`;
   const correctAnswer = String(getCorrectAnswer(numberForQuestion1, numberForQuestion2, action));

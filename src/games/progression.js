@@ -24,7 +24,7 @@ const getQuestionAndAnswer = () => {
   const correctAnswer = String(progression[problemPosition]);
   progression[problemPosition] = '..';
 
-  const question = `${progression}`;
+  const question = progression;
 
   const questionAndAnswer = {
     question,
