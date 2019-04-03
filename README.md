@@ -53,4 +53,4 @@ https://asciinema.org/a/x4mU7RPN1ynnSN1Z9iWwmRVrj
 $ make start_prime 
 ```
 ### Aschiinema
-<script id="asciicast-NdaZ1AMHjkNTwz9CKYTcK8yx7" src="https://asciinema.org/a/NdaZ1AMHjkNTwz9CKYTcK8yx7.js" async></script>
+[![asciicast](https://asciinema.org/a/NdaZ1AMHjkNTwz9CKYTcK8yx7.svg)](https://asciinema.org/a/NdaZ1AMHjkNTwz9CKYTcK8yx7)
