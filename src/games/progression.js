@@ -18,7 +18,7 @@ const getProgression = (startNum, step, size) => {
 const getQuestionAndAnswer = () => {
   const start = getRandInt(minRnd, maxRnd);
   const step = getRandInt(minRnd, maxRnd);
-  const problemPosition = getRandInt(1, length) - 1;
+  const problemPosition = getRandInt(0, length - 1);
 
   const progression = getProgression(start, step, length);
   const correctAnswer = String(progression[problemPosition]);
