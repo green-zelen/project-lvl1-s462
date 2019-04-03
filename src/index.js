@@ -23,6 +23,7 @@ const playBrainGame = (getQuestionAndAnswer, description) => {
     }
   }
   console.log(`Congratulations, ${userName}!`);
+  return true;
 };
 
 export default playBrainGame;

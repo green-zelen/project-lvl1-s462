@@ -8,7 +8,7 @@
 $ make install 
 ```
 ### Aschiinema
-https://asciinema.org/a/pDse8gxCxEFscqhEupPRQIHSQ
+[![asciicast](https://asciinema.org/a/f4Gw2sIPcMA8v4orF5KZ6z7BQ.svg)](https://asciinema.org/a/f4Gw2sIPcMA8v4orF5KZ6z7BQ)
 
 
 ## Start Even Game
@@ -17,7 +17,7 @@ https://asciinema.org/a/pDse8gxCxEFscqhEupPRQIHSQ
 $ make start_even 
 ```
 ### Aschiinema
-https://asciinema.org/a/Ovfqr6KFuXDsz2JXFPxD4xVJ9
+[![asciicast](https://asciinema.org/a/Yvt120bvedEgjxV4sptXOWR7f.svg)](https://asciinema.org/a/Yvt120bvedEgjxV4sptXOWR7f)
 
 
 ## Start Calculator Game
@@ -26,7 +26,7 @@ https://asciinema.org/a/Ovfqr6KFuXDsz2JXFPxD4xVJ9
 $ make start_calc 
 ```
 ### Aschiinema
-https://asciinema.org/a/1tdBZs6pLzOkrbls29dQgu3YM
+[![asciicast](https://asciinema.org/a/RnphY3demRpaGTWKv3pkYow56.svg)](https://asciinema.org/a/RnphY3demRpaGTWKv3pkYow56)
 
 
 ## Start GCD Game
@@ -35,7 +35,7 @@ https://asciinema.org/a/1tdBZs6pLzOkrbls29dQgu3YM
 $ make start_gcd 
 ```
 ### Aschiinema
-https://asciinema.org/a/QELJtRSxeOxeM7jKyEyi5a8ln
+[![asciicast](https://asciinema.org/a/tEQmf1oArjFvWYFZK6Dq67DSG.svg)](https://asciinema.org/a/tEQmf1oArjFvWYFZK6Dq67DSG)
 
 
 ## Start Progression Game
@@ -44,7 +44,7 @@ https://asciinema.org/a/QELJtRSxeOxeM7jKyEyi5a8ln
 $ make start_prog 
 ```
 ### Aschiinema
-https://asciinema.org/a/x4mU7RPN1ynnSN1Z9iWwmRVrj
+[![asciicast](https://asciinema.org/a/H0WXXRi8QxKqAGseeSppUF2uo.svg)](https://asciinema.org/a/H0WXXRi8QxKqAGseeSppUF2uo)
 
 
 ## Start Prime Game
